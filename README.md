@@ -1,4 +1,5 @@
 🧬 TCGA Lung Squamous Cell Carcinoma (LUSC) RNA-seq Differential Expression Analysis
+
 Project Overview
 This repository presents an end-to-end RNA-seq bioinformatics workflow using publicly available data from The Cancer Genome Atlas (TCGA) Lung Squamous Cell Carcinoma (LUSC) cohort.
 The goal of the project is to compare gene expression profiles between tumour and normal lung tissue and identify significantly differentially expressed genes (DEGs).
