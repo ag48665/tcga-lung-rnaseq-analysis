@@ -1,82 +1,42 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-# TCGA-LUSC RNA-seq Gene Expression Analysis
+🧬 TCGA Lung Squamous Cell Carcinoma (LUSC) RNA-seq Differential Expression Analysis
+Project Overview
+This repository presents an end-to-end RNA-seq bioinformatics workflow using publicly available data from The Cancer Genome Atlas (TCGA) Lung Squamous Cell Carcinoma (LUSC) cohort.
+The goal of the project is to compare gene expression profiles between tumour and normal lung tissue and identify significantly differentially expressed genes (DEGs).
+The analysis demonstrates a typical computational biology pipeline including preprocessing, exploratory data analysis, dimensionality reduction, statistical testing, and visualization.
+This project was created as part of my bioinformatics learning portfolio.
 
-## Project overview
+Objectives
+•	Process RNA-seq gene expression matrix
+•	Perform exploratory data analysis (EDA)
+•	Evaluate sample clustering using PCA
+•	Identify differentially expressed genes (DEGs)
+•	Visualize transcriptomic separation
+•	Demonstrate a reproducible research workflow
 
-This project performs an exploratory and differential gene expression analysis of the **TCGA-LUSC (Lung Squamous Cell Carcinoma)** RNA-seq dataset using Python.
+Dataset
+Source: The Cancer Genome Atlas (TCGA) https://www.kaggle.com/datasets/noepinefrin/tcga-lusc-lung-cell-squamous-carcinoma-gene-exp
 
-The goal of this analysis is to distinguish tumor and normal lung tissue samples based on gene expression profiles and identify significantly differentially expressed genes (DEGs).
-
-The workflow includes:
-
-* loading and preprocessing TCGA expression matrix
-* separating tumor and normal samples
-* dimensionality reduction using PCA
-* statistical testing for differential expression
-* identification of highly significant genes
-* visualization of transcriptomic separation
-
-This project was created as part of a bioinformatics learning portfolio.
-=======
-# 🧬 TCGA Lung Squamous Cell Carcinoma (LUSC) RNA-seq Differential Expression Analysis
-
-## Project Description
-This repository presents an end-to-end RNA-seq analysis workflow using publicly available data from **The Cancer Genome Atlas (TCGA)** Lung Squamous Cell Carcinoma (LUSC) cohort.
-
-The aim of the project was to compare gene expression profiles between tumor and normal lung tissue samples and identify significantly differentially expressed genes (DEGs). The analysis includes preprocessing, exploratory analysis, dimensionality reduction, statistical testing, and visualization.
-
-This project serves as a practical demonstration of a typical bioinformatics pipeline used in computational biology and biomedical data science.
-
----
-
-## Objectives
-- Process RNA-seq gene expression matrix
-- Perform exploratory data analysis
-- Evaluate sample clustering using PCA
-- Identify differentially expressed genes
-- Generate publication-style visualizations
-- Demonstrate reproducible research workflow
-
-
----
-
-## Dataset
-
-**Source:** The Cancer Genome Atlas (TCGA)
-
-**Cancer type:** Lung Squamous Cell Carcinoma (LUSC)
-
-The dataset contains normalized RNA-seq gene expression values:
-
-* ~56,907 genes
-* 551 patient samples
-
+Cancer type: Lung Squamous Cell Carcinoma (LUSC)
+The dataset contains normalized RNA-seq expression values:
+•	~56,900 genes
+•	551 patient samples
 Sample types:
+•	Tumour tissue
+•	Normal lung tissue
 
-* Tumor samples
-* Normal tissue samples
+Technologies & Libraries
+Language
+•	Python 3.10 (Anaconda environment)
+Libraries
+•	pandas
+•	numpy
+•	matplotlib
+•	seaborn
+•	scikit-learn
+•	scipy
+•	jupyter
 
----
-
-## Technologies and libraries
-
-Python 3.10 (Anaconda environment)
-
-Main libraries:
-
-* pandas
-* numpy
-* matplotlib
-* seaborn
-* scikit-learn
-* scipy
-
----
-
-## Project structure
-
-```
+Repository Structure
 tcga-lung-rnaseq-analysis/
 │
 ├── data/
@@ -85,278 +45,98 @@ tcga-lung-rnaseq-analysis/
 ├── notebooks/
 │   └── 01_TCGA_LUSC_analysis.ipynb
 │
-└── README.md
-```
-
----
-
-## Analysis workflow
-
-### 1. Data preprocessing
-
-The RNA-seq expression matrix was loaded into a pandas DataFrame.
-Genes are represented as rows and samples as columns.
-
-Steps performed:
-
-* reading CSV expression matrix
-* extracting sample identifiers
-* identifying sample type (tumor vs normal)
-* handling missing values
-
----
-
-### 2. Principal Component Analysis (PCA)
-
-To evaluate global transcriptomic differences between tumor and normal tissue, PCA was applied after standardization of gene expression values.
-
-Results:
-
-* clear clustering of tumor vs normal samples
-* demonstrates strong transcriptomic alteration in cancer tissue
-
----
-
-### 3. Differential Gene Expression (DEG) Analysis
-
-For each gene, tumor and normal groups were compared using statistical testing.
-
-Calculated metrics:
-
-* log2 Fold Change (log2FC)
-* p-value
-* −log10(p-value)
-
-Genes with strong statistical significance were identified as differentially expressed.
-
----
-
-## Key results
-
-The analysis identified multiple highly significant genes including:
-
-* AL049555.1
-* FAM83B
-* AUNIP
-* CASC9
-* TFAP2A
-* E2F7
-* EFNA3
-
-These genes are associated with cell proliferation, DNA repair, and cancer progression pathways.
-
----
-
-## Example outputs
-
-The project generates:
-
-* PCA tumor vs normal clustering plot
-* ranked DEG gene table
-* statistical significance measurements
-
----
-
-## How to run
-
-1. Clone the repository
-
-```
-git clone https://github.com/yourusername/tcga-lung-rnaseq-analysis.git
-```
-
-2. Create environment (Anaconda)
-
-```
-conda create -n bioinfo python=3.10
-conda activate bioinfo
-pip install pandas numpy matplotlib seaborn scikit-learn scipy jupyter
-```
-
-3. Run Jupyter
-
-```
-jupyter lab
-```
-
-4. Open:
-
-```
-notebooks/01_TCGA_LUSC_analysis.ipynb
-```
-
----
-
-## Purpose
-
-This project demonstrates practical skills in:
-
-* RNA-seq data handling
-* cancer transcriptomics
-* statistical analysis in bioinformatics
-* Python-based data science workflow
-
----
-
-## Author
-
-Agata Gabara
-=======
-nmn
->>>>>>> 2f6bb045df67e63fb5a874773eb5b2571e36f8ed
-=======
-**Source:** The Cancer Genome Atlas (TCGA)  
-**Cancer Type:** Lung Squamous Cell Carcinoma (LUSC)
-
-The raw sequencing files (FASTQ/BAM) are not included due to their large size and TCGA data distribution policies.  
-This repository contains processed expression data and analysis outputs required to reproduce the results.
-
----
-
-## Bioinformatics Workflow
-
-### 1. Data Preprocessing
-- Loaded gene expression matrix
-- Assigned sample labels (tumor vs normal)
-- Filtered low-expression genes
-- Applied log2 normalization
-
-### 2. Exploratory Data Analysis
-Principal Component Analysis (PCA) was performed to:
-- assess global transcriptomic structure
-- detect outliers
-- evaluate separation between tumor and normal samples
-
-### 3. Differential Expression Analysis
-Statistical testing was performed to identify genes with significantly different expression levels between tumor and normal tissue.
-
-**Significance criteria**
-- Adjusted p-value (FDR) < 0.05
-- |log2 Fold Change| > 1
-
-### 4. Visualization
-The analysis generated the following plots:
-- PCA projection plot
-- PCA tumor vs normal separation
-- Volcano plot of differential expression
-
----
-
-## Results
-
-### PCA (Tumor vs Normal Separation)
-The PCA shows clustering differences between tumor and normal samples, indicating substantial transcriptomic changes associated with cancer.
-
-![PCA Tumor vs Normal](results/PCA_class_separation_plot.png)
-
-### PCA Projection
-Global variance in gene expression captured by principal components.
-
-![PCA Projection](results/PCA_projection_plot.png)
-
-### Differential Expression (Volcano Plot)
-The volcano plot highlights significantly upregulated and downregulated genes in tumor samples.
-
-![Volcano Plot](results/volcano_tcga_lusc.png)
-
-The top 100 differentially expressed genes are available in:
-
-results/top100_DEGs_TCGA_LUSC.csv
-
-
----
-
-## Repository Structure
-
-tcga-lung-rnaseq-analysis/
-│
-├── notebooks/
-│ └── 01_TCGA_LUSC_analysis.ipynb # full analysis workflow
-│
 ├── results/
-│ ├── PCA_class_separation_plot.png
-│ ├── PCA_projection_plot.png
-│ ├── volcano_tcga_lusc.png
-│ └── top100_DEGs_TCGA_LUSC.csv
+│   ├── PCA_class_separation_plot.png
+│   ├── PCA_projection_plot.png
+│   ├── volcano_tcga_lusc.png
+│   └── top100_DEGs_TCGA_LUSC.csv
 │
 ├── .gitignore
 └── README.md
 
+Analysis Workflow
+1. Data Preprocessing
+•	Loaded RNA-seq expression matrix into pandas DataFrame
+•	Extracted sample identifiers
+•	Assigned sample labels (tumor vs normal)
+•	Handled missing values
+•	Applied log2 normalization
 
----
+2. Exploratory Data Analysis (PCA)
+Principal Component Analysis (PCA) was performed after standardizing gene expression values to evaluate global transcriptomic differences.
+Findings
+•	Clear clustering of tumour vs normal samples
+•	Indicates strong transcriptomic alteration in cancer tissue
 
-## Technologies Used
-- Python 3
-- Pandas
-- NumPy
-- Matplotlib
-- Scikit-learn
-- Jupyter Notebook
+3. Differential Gene Expression Analysis
+For each gene, tumour and normal groups were compared using statistical hypothesis testing.
+Calculated metrics
+•	log2 Fold Change (log2FC)
+•	p-value
+•	−log10(p-value)
 
----
+Significance criteria
+•	Adjusted p-value (FDR) < 0.05
+•	|log2FC| > 1
 
-## How to Reproduce the Analysis
+4. Visualization
+The analysis generated:
+•	PCA projection plot
+•	Tumour vs normal clustering plot
+•	Volcano plot of differential expression
+•	Ranked DEG gene table
 
-### 1. Clone the repository
-```bash
-git clone https://github.com/ag48665/tcga-lung-rnaseq-analysis.git
-cd tcga-lung-rnaseq-analysis
+Key Results
+Multiple highly significant genes were identified, including:
+•	FAM83B
+•	AUNIP
+•	CASC9
+•	TFAP2A
+•	E2F7
+•	EFNA3
 
-2. Install dependencies
-pip install pandas numpy matplotlib scikit-learn jupyter
-
-3. Run the notebook
-jupyter notebook
-
-
-Open:
-
-notebooks/01_TCGA_LUSC_analysis.ipynb
-
-Run all cells to reproduce the analysis and plots.
-
-Biological Interpretation
-
-Tumor samples exhibit a distinct gene expression profile compared to normal lung tissue.
-The large number of significantly dysregulated genes reflects major alterations in cellular pathways typical for cancer, including proliferation, metabolism, and cell cycle regulation.
-
-Skills Demonstrated
-
-RNA-seq data handling
-
-Data preprocessing and normalization
-
-PCA dimensionality reduction
-
-Statistical hypothesis testing
-
-Multiple testing correction (FDR)
-
-Scientific data visualization
-
-Reproducible research practices
-
-Git & GitHub workflow
-
-Author
-
-Bioinformatics portfolio project created as part of hands-on training in computational biology and RNA-seq data analysis.
-
-License
-
-This project is provided for educational and demonstration purposes using publicly available TCGA data.
-
-
----
-
-After you commit it, refresh your repo homepage — you’ll see a **full project page with figures**.  
-At that moment, you officially have something you can put in CV:
-
-> *“RNA-seq differential gene expression analysis of TCGA LUSC cohort (Python, PCA, statistical testing, visualization) — GitHub portfolio project.”*
-
-Next we can add a short **CV bullet point** recruiters actually notice (this matters more than the degree).
-
+These genes are associated with cancer-related pathways such as:
+•	cell proliferation
+•	DNA repair
+•	cell cycle regulation
 
 The top 100 differentially expressed genes are available in:
+results/top100_DEGs_TCGA_LUSC.csv
 
->>>>>>> 4c3d0723d16144d1c734b6f3a47d200d6bb51891
+How to Run
+1. Clone the repository
+git clone https://github.com/ag48665/tcga-lung-rnaseq-analysis.git
+cd tcga-lung-rnaseq-analysis
+2. Create environment
+conda create -n bioinfo python=3.10
+conda activate bioinfo
+pip install pandas numpy matplotlib seaborn scikit-learn scipy jupyter
+3. Launch Jupyter
+jupyter lab
+Open:
+notebooks/01_TCGA_LUSC_analysis.ipynb
+Run all cells to reproduce the analysis.
+
+Biological Interpretation
+Tumour samples exhibit a distinct gene expression profile compared to normal lung tissue.
+The large number of dysregulated genes reflects major alterations in cancer-related pathways, particularly proliferation, metabolism, and cell-cycle regulation.
+
+Skills Demonstrated
+•	RNA-seq data handling
+•	Data preprocessing & normalization
+•	PCA dimensionality reduction
+•	Statistical hypothesis testing
+•	Multiple testing correction (FDR)
+•	Scientific visualization
+•	Reproducible research
+•	Git & GitHub workflow
+•	Python for bioinformatics
+
+Author
+Agata Gabara
+Bioinformatics portfolio project demonstrating RNA-seq differential expression analysis using Python.
+
+License
+This project uses publicly available TCGA data and is provided for educational and demonstration purposes.
+
+
