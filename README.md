@@ -1,5 +1,11 @@
 # 🧬 TCGA Lung Squamous Cell Carcinoma (LUSC) RNA-seq Differential Expression Analysis
 
+Project Type: Bioinformatics / Cancer Genomics  
+Dataset: TCGA-LUSC (RNA-seq)  
+Language: Python  
+Goal: Identify differentially expressed genes between tumor and normal lung tissue
+
+
 ## Project Overview
 This repository presents an end-to-end RNA-seq bioinformatics workflow using publicly available data from The Cancer Genome Atlas (TCGA) Lung Squamous Cell Carcinoma (LUSC) cohort.
 
@@ -187,3 +193,4 @@ Bioinformatics portfolio project demonstrating RNA-seq differential expression a
 
 ## License
 This project uses publicly available TCGA data and is provided for educational and demonstration purposes.
+
