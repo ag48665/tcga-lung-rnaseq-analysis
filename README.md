@@ -37,7 +37,7 @@ This project serves as a practical demonstration of a typical bioinformatics pip
 - Identify differentially expressed genes
 - Generate publication-style visualizations
 - Demonstrate reproducible research workflow
->>>>>>> 4c3d0723d16144d1c734b6f3a47d200d6bb51891
+
 
 ---
 
