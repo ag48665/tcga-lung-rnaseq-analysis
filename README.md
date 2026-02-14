@@ -42,7 +42,6 @@ This project serves as a practical demonstration of a typical bioinformatics pip
 ---
 
 ## Dataset
-<<<<<<< HEAD
 
 **Source:** The Cancer Genome Atlas (TCGA)
 
