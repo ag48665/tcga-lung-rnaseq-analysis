@@ -36,15 +36,21 @@ This repository presents an end-to-end RNA-seq bioinformatics workflow using pub
 ✔ Reproducible Python-based workflow
 
 ---
+
 ## Main Findings
 
-### Tumor and normal samples show clear transcriptomic separation
+### PCA reveals clear separation between tumor and normal samples
 
-![PCA](results/PCA_projection_plot.png)
+<img src="results/figures/PCA_projection_plot.png" width="700">
 
-### Differential expression reveals extensive molecular dysregulation
+### Class separation in transcriptomic space
 
-![Volcano Plot](results/volcano_tcga_lusc.png)
+<img src="results/figures/PCA_class_separation_plot.png" width="700">
+
+### Differential expression analysis
+
+<img src="results/figures/volcano_tcga_lusc.png" width="700">
+
 
 ---
 
