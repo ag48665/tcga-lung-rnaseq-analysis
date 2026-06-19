@@ -13,7 +13,38 @@ The goal of the project is to compare gene expression profiles between tumour an
 
 The analysis demonstrates a typical computational biology pipeline including preprocessing, exploratory data analysis, dimensionality reduction, statistical testing, and visualization.
 
-This project was created as part of my bioinformatics learning portfolio.
+This repository presents an end-to-end RNA-seq bioinformatics workflow using publicly available TCGA-LUSC transcriptomic data.
+
+---
+
+## Project Highlights
+
+✔ Analysis of 551 TCGA-LUSC samples
+
+✔ RNA-seq differential expression analysis
+
+✔ Principal Component Analysis (PCA)
+
+✔ Tumor vs normal transcriptomic comparison
+
+✔ Volcano plot visualization
+
+✔ Multiple testing correction (FDR)
+
+✔ Identification of cancer-associated genes
+
+✔ Reproducible Python-based workflow
+
+---
+## Main Findings
+
+### Tumor and normal samples show clear transcriptomic separation
+
+![PCA](results/PCA_projection_plot.png)
+
+### Differential expression reveals extensive molecular dysregulation
+
+![Volcano Plot](results/volcano_tcga_lusc.png)
 
 ---
 
@@ -24,6 +55,14 @@ This project was created as part of my bioinformatics learning portfolio.
 - Identify differentially expressed genes (DEGs)
 - Visualize transcriptomic separation
 - Demonstrate a reproducible research workflow
+
+---
+## Research Questions
+
+1. Which genes are significantly dysregulated in LUSC tumors?
+2. Can PCA separate tumor and normal tissue samples?
+3. Which biological processes are associated with differential expression patterns?
+4. Which candidate genes may represent biomarkers or therapeutic targets?
 
 ---
 
@@ -145,7 +184,15 @@ results/top100_DEGs_TCGA_LUSC.csv
 
 
 ---
+## Key Takeaway
 
+Transcriptomic analysis of TCGA-LUSC samples revealed extensive molecular differences between tumor and normal lung tissue.
+
+Principal Component Analysis demonstrated clear sample separation, while differential expression analysis identified multiple genes involved in proliferation, DNA repair, and cell-cycle regulation.
+
+These findings illustrate the utility of RNA-seq for characterizing tumor biology and identifying candidate biomarkers.
+
+---
 ## How to Run
 
 ### 1. Clone the repository
@@ -165,9 +212,12 @@ Run all cells to reproduce the analysis.
 ---
 
 ## Biological Interpretation
-Tumour samples exhibit a distinct gene expression profile compared to normal lung tissue.
 
-The large number of dysregulated genes reflects major alterations in cancer-related pathways, particularly proliferation, metabolism, and cell-cycle regulation.
+Tumor samples displayed a markedly distinct transcriptomic profile compared with normal lung tissue.
+
+Several highly dysregulated genes identified in this analysis have previously been associated with cell-cycle progression, proliferation, DNA repair, and tumor development.
+
+The observed expression patterns are consistent with known molecular characteristics of lung squamous cell carcinoma and highlight the value of RNA-seq in cancer biomarker discovery.
 
 ---
 
@@ -183,11 +233,23 @@ The large number of dysregulated genes reflects major alterations in cancer-rela
 - Python for bioinformatics
 
 ---
-
 ## Author
+
 **Agata Gabara**
 
-Bioinformatics portfolio project demonstrating RNA-seq differential expression analysis using Python.
+Incoming MSc Bioinformatics Student
+
+Research Interests:
+
+- Cancer Genomics
+- Transcriptomics
+- Computational Biology
+- Multi-Omics Integration
+- Machine Learning for Genomics
+
+GitHub: https://github.com/ag48665
+
+LinkedIn: https://www.linkedin.com/in/agatha-gabara-06494a37/
 
 ---
 
