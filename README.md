@@ -102,6 +102,7 @@ The dataset contains normalized RNA-seq expression values:
 
 ## Repository Structure
 
+```text
 tcga-lung-rnaseq-analysis/
 │
 ├── data/
@@ -121,6 +122,9 @@ tcga-lung-rnaseq-analysis/
 │
 ├── README.md
 └── .gitignore
+```
+
+---
 
 
 ---
