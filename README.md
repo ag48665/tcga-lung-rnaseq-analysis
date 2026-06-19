@@ -101,22 +101,26 @@ The dataset contains normalized RNA-seq expression values:
 ---
 
 ## Repository Structure
+
 tcga-lung-rnaseq-analysis/
 │
 ├── data/
-│ └── LUSCexpfile.csv
+│   └── LUSCexpfile.csv
 │
 ├── notebooks/
-│ └── 01_TCGA_LUSC_analysis.ipynb
+│   └── 01_TCGA_LUSC_analysis.ipynb
 │
 ├── results/
-│ ├── PCA_class_separation_plot.png
-│ ├── PCA_projection_plot.png
-│ ├── volcano_tcga_lusc.png
-│ └── top100_DEGs_TCGA_LUSC.csv
+│   ├── figures/
+│   │   ├── PCA_class_separation_plot.png
+│   │   ├── PCA_projection_plot.png
+│   │   └── volcano_tcga_lusc.png
+│   │
+│   └── tables/
+│       └── top100_DEGs_TCGA_LUSC.csv
 │
-├── .gitignore
-└── README.md
+├── README.md
+└── .gitignore
 
 
 ---
